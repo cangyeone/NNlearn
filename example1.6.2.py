@@ -12,9 +12,7 @@ class GenDataXOR():
     def __init__(self,shape):
         self.shape=shape
     def func(self,dt):
-        if(dt[0]+dt[1]<0.5):
-            rt=[0.1]
-        elif((dt[0]+dt[1])>1.5):
+        if(dt[0]+dt[1]<1):
             rt=[0.1]
         else:
             rt=[0.9]
@@ -29,15 +27,12 @@ class GenDataXOR():
 x=tf.placeholder(tf.float32,shape=[None,2])
 y=tf.placeholder(tf.float32,shape=[None,1])
 
-W1=tf.Variable(tf.truncated_normal([2,2],stddev=0.1))
-b1=tf.Variable(tf.constant(0.1,shape=[2]))
+W1=tf.Variable(tf.truncated_normal([2,1],stddev=0.1))
+b1=tf.Variable(tf.constant(0.0,shape=[1]))
 fc1=tf.nn.sigmoid(tf.matmul(x,W1)+b1)
 
-W2=tf.Variable(tf.truncated_normal([2,1],stddev=0.1))
-b2=tf.Variable(tf.constant(0.1,shape=[1]))
-fc2=tf.nn.sigmoid(tf.matmul(fc1,W2)+b2)
 
-ce=tf.reduce_mean(tf.square(fc2-y))
+ce=tf.reduce_mean(tf.square(fc1-y))
 ts=tf.train.AdamOptimizer(1e-2).minimize(ce)
 
 sess=tf.Session()
@@ -56,12 +51,8 @@ for i in range(6000):
 #此之后为画图过程   
 reW1=np.array(sess.run(W1.value()))
 reb1=np.array(sess.run(b1.value()))
-reW2=np.array(sess.run(W2.value()))
-reb2=np.array(sess.run(b2.value()))
 print(reW1)
 print(reb1)
-print(reW2)
-print(reb2)
 def sigmoid(rt):
     return 1/(1+np.exp(-rt))
 def GenZ(X,Y):
@@ -70,9 +61,7 @@ def GenZ(X,Y):
         for itx in range(len(X[0])):
             l1=np.matmul([X[ity,itx],Y[ity,itx]],reW1)+reb1
             l1f=sigmoid(l1)
-            l2=np.matmul(l1f,reW2)+reb2
-            l2f=sigmoid(l2)
-            Z[ity,itx]=l2f[0]
+            Z[ity,itx]=l1f[0]
     return Z
         
 import matplotlib.pyplot as plt

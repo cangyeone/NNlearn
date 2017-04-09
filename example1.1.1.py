@@ -2,7 +2,7 @@
 """
 Created on Mon Mar  6 22:53:26 2017
 
-@author: Cangye
+@author: Cangye@hotmail.com
 """
 
 import tensorflow as tf

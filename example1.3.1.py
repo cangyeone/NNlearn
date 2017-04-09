@@ -2,7 +2,7 @@
 """
 Created on Thu Mar  9 16:18:49 2017
 
-@author: LLL
+@author: Cangye@hotmail.com
 """
 
 N=200

@@ -2,7 +2,7 @@
 """
 Created on Mon Mar 13 13:32:52 2017
 
-@author: Cangye
+@author: Cangye@hotmail.com
 """
 #预读取MNIST手写字库
 from tensorflow.examples.tutorials.mnist import input_data

@@ -87,7 +87,7 @@ class BPAlg():
         #print(self.dW)
 dt=GenDataXOR([30,2])
 tsc=BPAlg([2,2,1])
-for itrn in range(2000):
+for itrn in range(20000):
     data=dt.GenData()
     vali=dt.GenVali()
     tsc.data_feed(data,vali,2)

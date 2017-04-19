@@ -87,7 +87,7 @@ class BPAlg():
         #print(self.dW)
 dt=GenDataXOR([30,2])
 tsc=BPAlg([2,2,1])
-for itrn in range(20000):
+for itrn in range(2000):
     data=dt.GenData()
     vali=dt.GenVali()
     tsc.data_feed(data,vali,2)
@@ -123,6 +123,6 @@ Z=GenZ(X,Y)
 Z1=GenZ1(X,Y)
 ax=fig.add_subplot(111,projection='3d')
 ax.plot_surface(X,Y,Z,rstride=8,cstride=8, alpha=0.3)
-#ax.plot_surface(X,Y,Z1,rstride=8,cstride=8, alpha=0.3)
+ax.plot_surface(X,Y,Z1,rstride=8,cstride=8, alpha=0.3)
 ax.contour(X,Y,Z,zdir='z',offset=0, cmap=plt.cm.coolwarm)
 plt.show()

@@ -7,7 +7,6 @@ Created on Thu Jun 29 15:26:31 2017
 
 import tensorflow as tf
 import numpy as np
-from getsac import *
 class FaceIdentify():
     """
     Define the trunk process

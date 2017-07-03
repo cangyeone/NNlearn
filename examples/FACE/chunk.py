@@ -157,8 +157,6 @@ class GenData():
 import matplotlib.pyplot as plt
 from plotfig import *
 if __name__ == "__main__":
-    genator = GenData([50, 3000,3, 3])
-    data_test = genator.get_data_by_shape()
     trunk = FaceIdentify(300,1)
 
     #print(genator.get_shape())

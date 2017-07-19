@@ -36,10 +36,6 @@ def update(num, data, lines, scate):
 
 mpl.style.use('fivethirtyeight')
 
-x = y = np.arange(-3.0, 3.0, 0.05)
-X, Y = np.meshgrid(x, y)
-zs = np.array([function(x,y) for x,y in zip(np.ravel(X), np.ravel(Y))])
-Z = zs.reshape(X.shape)
 
 fig = plt.figure()
 ax = fig.gca(projection='3d')

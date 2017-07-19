@@ -45,16 +45,18 @@ print("W and b is : %f,%f"%(sess.run(W.value()),sess.run(b.value())))
 
 import matplotlib.pyplot as plt
 import matplotlib as mpl
-mpl.style.use('ggplot')
+plt.xkcd()
+mpl.style.use('seaborn-colorblind')
 cof = np.polyfit(np.reshape(dt,[-1]),np.reshape(rdt,[-1]),2) 
 p=np.poly1d(cof)
+
 
 fig,ax=plt.subplots()
 
 ax.scatter(np.reshape(dt,[-1]),np.reshape(odt,[-1]),marker='+')
 ax.scatter(np.reshape(dt,[-1]),np.reshape(rdt,[-1]),marker='o')
 ax.text(0,0.1,'$f(x)=%f+%fx+%fx^2$'%(cof[2],cof[1],cof[0]))
-x=np.linspace(0,0.2,100)
+x=np.linspace(0,2,100)
 ax.plot(x,p(x),lw=2)
 ax.text(0,4,'')
 plt.show()

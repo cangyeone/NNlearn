@@ -10,7 +10,7 @@ def function(x, y):
     v = y * 2.5
     return u * u + 5 * v * np.sin(v) + 5 * v
 def grad1(x, y):
-    return [-2*x, -2*y]
+    return [-2*x, -5 * np.sin(y) + 5 * y * np.cos(y) + 5]
 
 def update(num, data, lines, scate):
     eta=[2, 1, 0.1, 0.01, 0.1]

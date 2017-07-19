@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+"""
+Gradient is a basic conception of all Optimization Algorithm.
+"""
+
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 from mpl_toolkits.mplot3d import axes3d

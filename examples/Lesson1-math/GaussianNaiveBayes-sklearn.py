@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+"""
+The file is use to elucidate one-dimensional Gaussian Naive Bayes Method.
+
+"""
+
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 from mpl_toolkits.mplot3d import axes3d

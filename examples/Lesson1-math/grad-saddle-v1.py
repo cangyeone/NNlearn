@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+"""
+Saddle point can greatly affect the iterative process.
+"""
+
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 from mpl_toolkits.mplot3d import axes3d

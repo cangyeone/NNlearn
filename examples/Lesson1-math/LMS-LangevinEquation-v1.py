@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+"""
+LMS algorithm can be described by equipartition law theromdynamics.
+We draw some pictures to elucidate the process.
+"""
+
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 from mpl_toolkits.mplot3d import axes3d

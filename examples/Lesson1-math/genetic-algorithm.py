@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+"""
+The file is use to elucidate global minimum.
+Another goal of this file is to expound the Genetic Algorithm.
+"""
+
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 from mpl_toolkits.mplot3d import axes3d

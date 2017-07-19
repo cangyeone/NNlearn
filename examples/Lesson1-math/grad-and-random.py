@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+"""
+The gradient we used in our method is random.
+Do not mix it with that we talked before.
+"""
+
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 from mpl_toolkits.mplot3d import axes3d

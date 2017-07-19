@@ -1,5 +1,0 @@
-\contentsline {section}{\numberline {1}向量张量与矩阵}{1}
-\contentsline {section}{\numberline {2}单层感知器}{2}
-\contentsline {section}{\numberline {3}单层感知器实现}{2}
-\contentsline {section}{\numberline {4}多层感知器}{3}
-\contentsline {section}{\numberline {5}多层感知器实现}{3}

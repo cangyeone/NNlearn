@@ -10,7 +10,7 @@ def attrack(w,t,a1,a2,a3,a4,a5,a6):
     x, y, z = w
     return np.array([a1*(y-x)+a4*x*z,a2*x-x*z+a6*y,a3*z+x*y-a5*x*x])
 
-t = np.arange(0, 3, 0.001) 
+t = np.arange(0, 6, 0.001) 
 track = []
 track.append(odeint(attrack, (1.1, 0, 0.0), t, args=(40,55,1.833,0.16,0.65,20))/300+0.5)
 track.append(odeint(attrack, (4, 0, 0), t, args=(41,55,1.833,0.16,0.65,20))/300+0.5)

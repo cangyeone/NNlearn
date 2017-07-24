@@ -47,7 +47,7 @@ genData=GenDataXOR([50,2])
 tsD=GenDataXOR([500,2])
 ts1=tsD.GenData()
 ts2=tsD.GenVali()
-for i in range(6000):
+for i in range(10000):
     data=genData.GenData()
     vali=genData.GenVali()
     sess.run(ts,feed_dict={x:data,y:vali})
